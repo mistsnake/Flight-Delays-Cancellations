@@ -28,7 +28,7 @@ for checkbox in checkboxes:
 # Scroll back up
 driver.execute_script("window.scrollTo(0, 0);")  # This scrolls back to the top
 
-time.sleep(1)
-driver.find_element(By.ID, "btnDownload").click()
+#time.sleep(1)
+#driver.find_element(By.ID, "btnDownload").click()
 
 #driver.quit()
