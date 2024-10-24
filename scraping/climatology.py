@@ -112,6 +112,8 @@ def setup_webdriver():
     webdriver: The Selenium WebDriver instance for Firefox in headless mode.
     """
     logging.info("Setting up the WebDriver.")
+    
+    # Remove explicit path
     geckodriver_path = "/home/stochastic1017/.wdm/drivers/geckodriver/linux64/v0.35.0/geckodriver"
     service = FirefoxService(executable_path=geckodriver_path)
     options = FirefoxOptions()
@@ -120,7 +122,8 @@ def setup_webdriver():
     options.add_argument("--disable-gpu")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
-    
+
+    # Use gecko install
     driver = webdriver.Firefox(service=service, options=options)
     logging.info("WebDriver successfully set up.")
     return driver
